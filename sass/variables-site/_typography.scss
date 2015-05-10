@@ -1,5 +1,34 @@
-$font__main: sans-serif;
+$knockout1: 'Knockout 46 A', 'Knockout 46 B';
+$knockout2: 'Knockout 47 A', 'Knockout 47 B';
+$knockout3: 'Knockout 48 A', 'Knockout 48 B';
+$knockout4: 'Knockout 49 A', 'Knockout 49 B';
+$knockout5: 'Knockout 50 A', 'Knockout 50 B';
+
+$sentinel: 'Sentinel SSm A', 'Sentinel SSm B';
+$didot: 'Didot 16 A', 'Didot 16 B';
+$gotham: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B';
+$proxima: "proxima-nova";
+$bebas: "bebas-neue";
+$proxima_condensed: "proxima-nova-condensed";
+
+$font__main: '$sentinel', 'Georgia', serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$font__sans: $gotham, sans-serif;
+$font__title: $knockout3, 'Oswald', sans-serif;
+$font__title__backup: 'Oswald', sans-serif;
+$font__menu: $gotham, sans-serif;
+
+$serif: $sentinel, 'Georgie', serif;
+$sans: $gotham;
+
+.impero {
+	h2 {
+	font-family: $knockout3;
+}}
+.i_media {
+	h2 {
+	font-family: $gotham;
+}}

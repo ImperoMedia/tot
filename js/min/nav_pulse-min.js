@@ -1,0 +1,1 @@
+$(".main-navigation").hover(function(n){$(this).addClass("animated pulse")}),$(".main-navigation").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){$(this).removeClass("animated pulse")});

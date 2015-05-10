@@ -1,2 +1,375 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+html, body, .main-content-area, .full, .site-main {height: 100%;}
+.site-header {
+}
+.site-footer {
+	min-height: 100px;
+}
+.site-main, .main-content-area, .full, .site-main {
+	display: inline;
+}
+.entry-header {
+	display: none;
+}
+.entry-content, .entry-header, .page-main {
+	max-width: 1170px;
+	margin: 0 auto !important;
+}
+.entry-content {
+	padding: 150px 50px;
+	background: rgba(255,255,255,.7);
+	h1, h2, h3, h4 {
+		font-family: $gotham;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+}
+.nav-container {
+	height: 100px;
+	box-shadow: $white 0px 1px 1px;
+	background: $faded_green;
+	width: 100%;
+	position: fixed;
+	line-height: 70px;
+	z-index: 2;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.f-nav {
+	background: $faded_white;
+	box-shadow: $faded_green 0 1px 1px;
+	height: 70px;
+	z-index: 3;
+	margin: -10px 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.main-page {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+.inner {
+	padding: 2em 0 0 0;
+}
+#primary {
+	float: left;
+	width: 100%;
+	min-height: 700px;
+}
+#secondary {
+	float: left;
+	width: 33.33333%;
+	padding: 20px 20px 0 0;
+	display: none;
+}
+.site-title {
+	margin-top: 15px;
+	float: left;
+}
+.hero_content {
+	display: block;
+	text-align: right;
+	max-width: 1140px;
+	height: 700px;
+	position: relative;
+	h2, h3, h4, h5 {
+		margin: 0;
+		padding: 0;
+		color: $paper;
+		font-family: $knockout4;
+		text-transform: uppercase;
+		line-height: 1;
+		text-shadow: 3px 3px 0px $dark;
+		text-align: right;
+	}
+	h2 {
+		font-size: 6em;
+		margin: 0 0 10px 0;
+		padding:0;
+		float: right;
+	}
+	h3, h4, h5 {
+		font-size: 1.5em;
+		padding-bottom: 20px;
+		font-family: $didot;
+		text-transform: none;
+		font-style: italic;
+		font-weight: 300;
+		margin-bottom: 0;
+		padding-bottom: 0;
+
+	}
+	h4 {
+		font-size: 1.1em;
+		padding-top: 7px;
+	}
+	h5 {
+	}
+}
+.hero_headline {
+	width: 450px;
+	height: 700px;
+	float: right;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	.hero_text {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+#nav {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	.nav_minn, .nav_chicago, .nav_sf, .nav_lv {
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		-webkit-transition: opacity 0.45s ease-in-out;
+		transition: opacity 0.45s ease-in-out;
+		text-align: center;
+		padding: 20% 0 0;
+		font-weight: 900;
+		opacity: 1;
+       &:hover{
+			opacity: 1;
+			-webkit-transition: font-size 0.45s ease-in-out;
+			transition: font-size 0.45s ease-in-out;
+			background: rgba( 35, 135, 35, 0.2 );
+			font-size: 120%;
+			}
+	}
+}
+.nav-1, .nav-2, .nav-3, .nav-4, .nav img {
+	width: 25%;
+	height: 100%;
+	display: block;
+	float: left;
+	text-align: center;
+	background-size: auto 100%;
+	background-position: center center;
+	-webkit-transition: background-size 0.5s ease-in-out;
+	transition: background-size 0.5s ease-in-out;
+	border-right: 1px solid $white;
+	border-left: 1px solid $white;
+	&:hover {
+		opacity: .85;
+		background-size: auto 120%;
+	}
+	h2 {
+		font-family: $knockout4;
+		font-size: 2.5em;
+		margin: 40px 0;
+		padding: 0;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	@media screen and (min-width: 781px) and (max-width: 960px) {
+		font-size: 90%;
+	}
+	@media screen and (max-width: 780px) {
+		width: 50%;
+	}
+	@media screen and (max-width: 500px) {
+		width: 100%;
+	}
+	
+}
+.nav-1 {
+	background-image: url(http://assets.imperomedia.com/images/tot/2013/troy_burne.jpg);
+	border-left: none;
+}
+.nav-2 {
+	background-image: url(http://assets.imperomedia.com/images/tot/2014/radar.jpg);
+}
+.nav-3 {
+	background-image: url(http://assets.imperomedia.com/images/tot/2011/halfmoonbay.jpg);
+}
+.nav-4 {
+	background-image: url(http://assets.imperomedia.com/images/tot/2012/WolfCreek.jpg);
+	border-right: none;
+}
+.nav_minn h2, .nav_chicago h2, .nav_sf h2, .nav_lv h2 {
+	color: $white;
+	text-shadow: 3px 3px 0px $dark;
+}
+#city_main {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	top: 0;
+	position: relative;
+	z-index: 1;
+	padding-top: 75px;
+	border-bottom: 2px solid $faded_green;
+	.container {
+		margin: 2.5em auto;
+		max-width: 1170px;
+	}
+	.city_content {
+		margin: 0 auto;
+		margin-top: 75px;
+	}
+	.city_link_title {
+		float: left;
+		width: 350px;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 3em;
+		padding-top: 50px;
+		a {
+			color: $paper;
+			font-family: $knockout3;
+			text-transform: uppercase;
+			line-height: 1;
+			text-shadow: 3px 3px 0px $dark;
+			text-decoration: none;
+		}
+	}
+	.row {
+		-webkit-animation-duration: 3s;
+		animation-duration: 3s;
+		animation-delay: 1s;
+		-webkit-animation-delay: 1s;
+	}
+}
+#hero {
+	width: 100%;
+	height: 100%;
+	background: url(http://assets.imperomedia.com/images/tot/ch_large.JPG) center center;
+	background-size: cover;
+	top: 0;
+	position: relative;
+	z-index: 1;
+	padding-top: 75px;
+	border-bottom: 2px solid $faded_green;
+	.container {
+		margin: 2.5em auto;
+		max-width: 1170px;
+	}
+}
+#about, #work, #services, #contact {
+	width: 100%;
+	overflow: hidden;
+	padding-top: 45px;
+	top: -45px;
+	font-family: $proxima;
+	text-align: center;
+	.container {
+		margin: 1em auto;
+		max-width: 1170px;
+		overflow: hidden;
+		padding-bottom: 50px;
+	}
+	h2, h3, h4, h5 {
+		font-family: $font__title;
+		font-weight: 300;
+		line-height: 1.5;
+	}
+	h2 {font-size: 2.5em; text-transform: uppercase;}
+	h3 {font-size: 1.5em; text-transform: uppercase;}
+	h4 {
+		font-size: 16px;
+		font-family: $serif;
+		font-style: italic;
+	}
+}
+#about {
+	background: #fff;
+	box-sizing: border-box;
+	width: 100%;
+	h2 {font-size: 2em;}
+	h4 {
+		max-width: 840px;
+		margin: 0 auto;
+	}
+	.about_box {
+		width: 1040px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+}
+#work {
+	background: $white;
+	color: $dark;
+	.col-lg-4 {
+		padding: 1px;
+		margin: 0;
+	}
+	.container {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+		margin: 0 auto;
+	}
+	.view {
+		margin: 0;
+	}
+	h2 {margin-top: -15px;}
+	h3 {font-size: 2em; font-weight: 600;}
+}
+#services {
+	background: #fff;
+	color: $dark;
+	.container {
+		max-width: 100%;
+		margin-top: -15px;
+	}
+	h2 {
+		margin-top: -10px;
+		padding-bottom: 15px;
+	}
+	.module {
+		width: 100%;
+		height: 200px;
+	}
+	figure {
+		margin: 0 0 20px;
+		text-align: center;
+	}
+}
+#contact {
+	background: $white;
+	color: $dark;
+	h3, h4, p {
+		margin: 0 0 10px 0;
+	}
+	h3 {
+		font-size: 2.5em;
+		line-height: 1;
+	}
+	.container {
+		width: 100%;
+		.contact_left {
+			width: 60%;
+			float: left;
+			padding: 0 5%;
+		}
+		.contact_right {
+			width: 40%;
+			float: left;
+			text-align: center;
+			padding-right: 10%;
+		}
+	}
+}
+.site-footer {
+	background: $main;
+	min-height: 50px;
+	line-height: 50px;
+}

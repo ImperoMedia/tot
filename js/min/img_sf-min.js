@@ -1,0 +1,1 @@
+var image=new Array;image[0]="http://assets.imperomedia.com/images/tot/2011/halfmoonbay.jpg",image[1]="http://assets.imperomedia.com/images/tot/2014/radar.jpg",image[2]="http://assets.imperomedia.com/images/tot/2013/troy_burne.jpg",image[3]="http://placehold.it/50";var size=image.length,x=Math.floor(size*Math.random());$(".nav-3").attr("src",image[x]);

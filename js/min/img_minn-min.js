@@ -1,0 +1,1 @@
+var image=new Array;image[0]="http://assets.imperomedia.com/images/tot/2013/troy_burne.jpg",image[1]="http://placehold.it/30",image[2]="http://placehold.it/40",image[3]="http://placehold.it/50";var size=image.length,x=Math.floor(size*Math.random());$(".nav-1").attr("src",image[x]);

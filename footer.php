@@ -12,14 +12,15 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tot' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'tot' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'tot' ), 'TOT', '<a href="http://imperomedia.com" rel="designer">Luke Kohler</a>' ); ?>
+				Copyright &copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All Rights Reserved.
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script src="http://assets.imperomedia.com/code/countdown.js" type="text/javascript"></script>
+<script src="http://assets.imperomedia.com/code/nav_pulse.js" type="text/javascript"></script>
 
 </body>
 </html>

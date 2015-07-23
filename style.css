@@ -43,12 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 /*- Material Original 500*/
 /*Material 700, my change to default green*/
-.impero h2 {
-  font-family: "Knockout 48 A", "Knockout 48 B"; }
-
-.i_media h2 {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B"; }
-
 html, body, .main-content-area, .full, .site-main {
   height: 100%; }
 
@@ -66,9 +60,11 @@ html, body, .main-content-area, .full, .site-main {
   margin: 0 auto !important; }
 
 .entry-content {
-  padding: 150px 50px;
-  background: rgba(255, 255, 255, 0.7); }
-  .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4 {
+  padding: 175px 50px;
+  background: rgba(255, 255, 255, 0.7);
+  min-height: 850px;
+  border-bottom: 4px solid #2E7D32; }
+  .entry-content h1, .entry-content h2, .entry-content h3, .entry-content .hero_content h5, .hero_content .entry-content h5, .entry-content h4 {
     font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
     font-weight: 500;
     text-transform: uppercase; }
@@ -82,8 +78,9 @@ html, body, .main-content-area, .full, .site-main {
   line-height: 70px;
   z-index: 2;
   -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  box-sizing: border-box;
+  clear: both; }
 
 .f-nav {
   background: rgba(239, 239, 239, 0.9);
@@ -92,7 +89,6 @@ html, body, .main-content-area, .full, .site-main {
   z-index: 3;
   margin: -10px 0;
   -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
 
 .main-page {
@@ -118,41 +114,69 @@ html, body, .main-content-area, .full, .site-main {
   margin-top: 15px;
   float: left; }
 
+/***********************
+FRONT PAGE
+***********************/
+/*Hero Section*/
 .hero_content {
   display: block;
   text-align: right;
-  max-width: 1140px;
-  height: 700px;
+  max-width: 1040px;
+  height: 100%;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  margin: 0 auto;
   position: relative; }
-  .hero_content h2, .hero_content h3, .hero_content h4, .hero_content h5 {
+  .hero_content h2, .hero_content h3, .hero_content h5, .hero_content h4, .hero_content h5 {
     margin: 0;
     padding: 0;
     color: #efefef;
     font-family: "Knockout 49 A", "Knockout 49 B";
     text-transform: uppercase;
     line-height: 1;
-    text-shadow: 3px 3px 0px #3a3a3c;
     text-align: right; }
   .hero_content h2 {
     font-size: 6em;
-    margin: 0 0 10px 0;
-    padding: 0;
-    float: right; }
-  .hero_content h3, .hero_content h4, .hero_content h5 {
-    font-size: 1.5em;
-    padding-bottom: 20px;
+    margin: 0 0 20px 0;
+    float: right;
+    text-shadow: 4px 4px 0px #3a3a3c; }
+    @media (max-width: 767px) {
+      .hero_content h2 {
+        font-size: 5em; } }
+    @media (max-width: 479px) {
+      .hero_content h2 {
+        font-size: 4em; } }
+  .hero_content h3, .hero_content h5, .hero_content h4, .hero_content h5 {
     font-family: "Didot 16 A", "Didot 16 B";
     text-transform: none;
     font-style: italic;
     font-weight: 300;
     margin-bottom: 0;
-    padding-bottom: 0; }
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 0px #3a3a3c; }
+  .hero_content h3, .hero_content h5 {
+    font-size: 2.5em;
+    line-height: 1.35; }
+    @media (max-width: 767px) {
+      .hero_content h3, .hero_content h5 {
+        font-size: 2em; } }
+    @media (max-width: 479px) {
+      .hero_content h3, .hero_content h5 {
+        font-size: 2em; } }
   .hero_content h4 {
-    font-size: 1.1em;
-    padding-top: 7px; }
+    font-size: 1.25em; }
+    @media (max-width: 767px) {
+      .hero_content h4 {
+        font-size: 1em; } }
+    @media (max-width: 479px) {
+      .hero_content h4 {
+        font-size: 1em; } }
+  .hero_content h5 {
+    padding-bottom: 0; }
 
 .hero_headline {
-  width: 450px;
   height: 700px;
   float: right;
   position: absolute;
@@ -163,28 +187,45 @@ html, body, .main-content-area, .full, .site-main {
   animation-delay: 1s;
   -webkit-animation-delay: 1s; }
   .hero_headline .hero_text {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
+    border-radius: 50px;
+    background: -webkit-radial-gradient(rgba(10, 10, 10, 0.25), rgba(200, 200, 200, 0.05) 55%);
+    background: radial-gradient(rgba(10, 10, 10, 0.25), rgba(200, 200, 200, 0.05) 55%); }
 
+#hero {
+  width: 100%;
+  height: 100%;
+  background: url(http://assets.imperomedia.com/images/tot/ch_large.JPG) center center;
+  background-size: cover;
+  top: 0;
+  z-index: 1;
+  padding-top: 75px;
+  border-bottom: 2px solid rgba(46, 125, 50, 0.75); }
+  #hero .container {
+    margin: 5em auto;
+    max-width: 1170px;
+    height: 100%; }
+
+/*Front Page Navigation Block*/
 #nav {
   width: 100%;
   height: 500px;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 2px solid #133214;
+  border-bottom: 2px solid #efefef; }
   #nav .nav_minn, #nav .nav_chicago, #nav .nav_sf, #nav .nav_lv {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    -webkit-transition: opacity 0.45s ease-in-out;
-    transition: opacity 0.45s ease-in-out;
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
     text-align: center;
     padding: 20% 0 0;
     font-weight: 900;
     opacity: 1; }
     #nav .nav_minn:hover, #nav .nav_chicago:hover, #nav .nav_sf:hover, #nav .nav_lv:hover {
       opacity: 1;
-      -webkit-transition: font-size 0.45s ease-in-out;
-      transition: font-size 0.45s ease-in-out;
+      -webkit-transition: all 0.45s ease-in-out;
+      transition: all 0.45s ease-in-out;
       background: rgba(35, 135, 35, 0.2);
       font-size: 120%; }
 
@@ -196,16 +237,16 @@ html, body, .main-content-area, .full, .site-main {
   text-align: center;
   background-size: auto 100%;
   background-position: center center;
-  -webkit-transition: background-size 0.5s ease-in-out;
-  transition: background-size 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-right: 1px solid #efefef;
   border-left: 1px solid #efefef; }
   .nav-1:hover, .nav-2:hover, .nav-3:hover, .nav-4:hover, .nav img:hover {
     opacity: .85;
     background-size: auto 120%; }
   .nav-1 h2, .nav-2 h2, .nav-3 h2, .nav-4 h2, .nav img h2 {
-    font-family: "Knockout 49 A", "Knockout 49 B";
-    font-size: 2.5em;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+    font-size: 2em;
     margin: 40px 0;
     padding: 0;
     line-height: 1;
@@ -213,10 +254,10 @@ html, body, .main-content-area, .full, .site-main {
   @media screen and (min-width: 781px) and (max-width: 960px) {
     .nav-1, .nav-2, .nav-3, .nav-4, .nav img {
       font-size: 90%; } }
-  @media screen and (max-width: 780px) {
+  @media (max-width: 767px) {
     .nav-1, .nav-2, .nav-3, .nav-4, .nav img {
       width: 50%; } }
-  @media screen and (max-width: 500px) {
+  @media (max-width: 479px) {
     .nav-1, .nav-2, .nav-3, .nav-4, .nav img {
       width: 100%; } }
 
@@ -263,7 +304,7 @@ html, body, .main-content-area, .full, .site-main {
     padding-top: 50px; }
     #city_main .city_link_title a {
       color: #efefef;
-      font-family: "Knockout 48 A", "Knockout 48 B";
+      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
       text-transform: uppercase;
       line-height: 1;
       text-shadow: 3px 3px 0px #3a3a3c;
@@ -273,20 +314,6 @@ html, body, .main-content-area, .full, .site-main {
     animation-duration: 3s;
     animation-delay: 1s;
     -webkit-animation-delay: 1s; }
-
-#hero {
-  width: 100%;
-  height: 100%;
-  background: url(http://assets.imperomedia.com/images/tot/ch_large.JPG) center center;
-  background-size: cover;
-  top: 0;
-  position: relative;
-  z-index: 1;
-  padding-top: 75px;
-  border-bottom: 2px solid rgba(46, 125, 50, 0.75); }
-  #hero .container {
-    margin: 2.5em auto;
-    max-width: 1170px; }
 
 #about, #work, #services, #contact {
   width: 100%;
@@ -300,14 +327,14 @@ html, body, .main-content-area, .full, .site-main {
     max-width: 1170px;
     overflow: hidden;
     padding-bottom: 50px; }
-  #about h2, #about h3, #about h4, #about h5, #work h2, #work h3, #work h4, #work h5, #services h2, #services h3, #services h4, #services h5, #contact h2, #contact h3, #contact h4, #contact h5 {
+  #about h2, #about h3, #about .hero_content h5, .hero_content #about h5, #about h4, #about h5, #work h2, #work h3, #work .hero_content h5, .hero_content #work h5, #work h4, #work h5, #services h2, #services h3, #services .hero_content h5, .hero_content #services h5, #services h4, #services h5, #contact h2, #contact h3, #contact .hero_content h5, .hero_content #contact h5, #contact h4, #contact h5 {
     font-family: "Knockout 48 A", "Knockout 48 B", "Oswald", sans-serif;
     font-weight: 300;
     line-height: 1.5; }
   #about h2, #work h2, #services h2, #contact h2 {
     font-size: 2.5em;
     text-transform: uppercase; }
-  #about h3, #work h3, #services h3, #contact h3 {
+  #about h3, #about .hero_content h5, .hero_content #about h5, #work h3, #work .hero_content h5, .hero_content #work h5, #services h3, #services .hero_content h5, .hero_content #services h5, #contact h3, #contact .hero_content h5, .hero_content #contact h5 {
     font-size: 1.5em;
     text-transform: uppercase; }
   #about h4, #work h4, #services h4, #contact h4 {
@@ -344,7 +371,7 @@ html, body, .main-content-area, .full, .site-main {
     margin: 0; }
   #work h2 {
     margin-top: -15px; }
-  #work h3 {
+  #work h3, #work .hero_content h5, .hero_content #work h5 {
     font-size: 2em;
     font-weight: 600; }
 
@@ -367,9 +394,9 @@ html, body, .main-content-area, .full, .site-main {
 #contact {
   background: #efefef;
   color: #3a3a3c; }
-  #contact h3, #contact h4, #contact p {
+  #contact h3, #contact .hero_content h5, .hero_content #contact h5, #contact h4, #contact p {
     margin: 0 0 10px 0; }
-  #contact h3 {
+  #contact h3, #contact .hero_content h5, .hero_content #contact h5 {
     font-size: 2.5em;
     line-height: 1; }
   #contact .container {
@@ -390,6 +417,12 @@ html, body, .main-content-area, .full, .site-main {
   line-height: 50px; }
 
 /*Transition Classes*/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -583,7 +616,7 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, .hero_content h5, h4, h5, h6 {
   clear: both;
   margin-top: 0; }
 
@@ -611,7 +644,7 @@ pre {
   padding: 1.6em; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem; }
 
@@ -679,14 +712,9 @@ big {
   filter: alpha(opacity=0);
   opacity: 0;
   -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
   transition: all 0.5s linear; }
 
 .view {
@@ -715,22 +743,17 @@ big {
   margin-left: -10px;
   position: relative;
   -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
 
 .view-tenth:hover > img {
   -webkit-transform: scale(1.25) rotate(2deg);
-  -moz-transform: scale(1.25) rotate(2deg);
-  -o-transform: scale(1.25) rotate(2deg);
   -ms-transform: scale(1.25) rotate(2deg);
   transform: scale(1.25) rotate(2deg);
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3; }
 
-.view h3 {
+.view h3, .view .hero_content h5, .hero_content .view h5 {
   text-transform: uppercase;
   color: #bf1e2e;
   font-weight: 600;
@@ -743,7 +766,7 @@ big {
   margin: 10px 0 0 0;
   text-shadow: none; }
 
-.view-tenth h3 {
+.view-tenth h3, .view-tenth .hero_content h5, .hero_content .view-tenth h5 {
   color: #bf1e2e;
   font-weight: 600;
   font-family: "proxima-nova";
@@ -751,14 +774,9 @@ big {
   background: transparent;
   border-bottom: 1px solid rgba(239, 239, 239, 0.9);
   -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
   transition: all 0.5s linear;
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -786,22 +804,15 @@ big {
   filter: alpha(opacity=0);
   opacity: 0;
   -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
   transition: all 0.5s linear; }
 
-.view-tenth:hover h3,
+.view-tenth:hover h3, .view-tenth:hover .hero_content h5, .hero_content .view-tenth:hover h5,
 .view-tenth:hover p,
 .view-tenth:hover a.info {
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -1929,22 +1940,24 @@ a {
   color: #efefef;
   background: #2E7D32; }
 
-@media screen and (max-width: 1072px) {
+@media screen and (max-width: 1100px) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
   .main-navigation ul {
     display: none; }
+    .main-navigation ul ul {
+      display: block;
+      padding-left: 25px; }
 
   #countdown {
-    font-size: 2.25em;
-    padding-left: 25px;
+    font-size: 3em;
+    padding: 0 15px;
     margin-top: 30px;
-    width: 50%; }
+    max-width: 50%; }
 
   .main-navigation {
-    width: 45%;
     margin: 15px 15px 0 0; }
     .main-navigation li {
       background: rgba(239, 239, 239, 0.7);
@@ -1952,6 +1965,12 @@ a {
       width: 200px; }
       .main-navigation li a {
         color: #2E7D32; } }
+@media screen and (max-width: 540px) {
+  #countdown {
+    font-size: 2em;
+    min-width: 100px;
+    max-width: 300px;
+    padding: 10px; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {

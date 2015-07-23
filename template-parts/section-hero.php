@@ -14,9 +14,9 @@
 
 			<div class="hero_headline animated fadeIn">
 
-				<div class="hero_text">">
+				<div class="hero_text">
 					<h5>The</h5>
-					<h2>Tournament of Turkeys</h2>
+					<h2>Tournament of<br>Turkeys</h2>
 					<h3><?php bloginfo('description'); ?></h3>
 					<h4>A Tradition Similar to Many Others</h4>
 				</div>

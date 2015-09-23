@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: TOT
 Theme URI: http://underscores.me/
@@ -60,14 +61,17 @@ html, body, .main-content-area, .full, .site-main {
   margin: 0 auto !important; }
 
 .entry-content {
-  padding: 175px 50px;
+  padding: 150px 200px;
   background: rgba(255, 255, 255, 0.7);
   min-height: 850px;
   border-bottom: 4px solid #2E7D32; }
   .entry-content h1, .entry-content h2, .entry-content h3, .entry-content .hero_content h5, .hero_content .entry-content h5, .entry-content h4 {
     font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
     font-weight: 500;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 0; }
+  .entry-content p {
+    line-height: 2; }
 
 .nav-container {
   height: 100px;
@@ -203,13 +207,13 @@ FRONT PAGE
   #hero .container {
     margin: 5em auto;
     max-width: 1170px;
-    height: 100%; }
+    height: 100%;
+    min-height: 750px; }
 
 /*Front Page Navigation Block*/
 #nav {
   width: 100%;
   height: 500px;
-  overflow: hidden;
   border-top: 2px solid #133214;
   border-bottom: 2px solid #efefef; }
   #nav .nav_minn, #nav .nav_chicago, #nav .nav_sf, #nav .nav_lv {
@@ -226,7 +230,7 @@ FRONT PAGE
       opacity: 1;
       -webkit-transition: all 0.45s ease-in-out;
       transition: all 0.45s ease-in-out;
-      background: rgba(35, 135, 35, 0.2);
+      background: rgba(35, 135, 35, 0.1);
       font-size: 120%; }
 
 .nav-1, .nav-2, .nav-3, .nav-4, .nav img {
@@ -235,7 +239,7 @@ FRONT PAGE
   display: block;
   float: left;
   text-align: center;
-  background-size: auto 100%;
+  background-size: auto 110%;
   background-position: center center;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -269,7 +273,7 @@ FRONT PAGE
   background-image: url(http://assets.imperomedia.com/images/tot/2014/radar.jpg); }
 
 .nav-3 {
-  background-image: url(http://assets.imperomedia.com/images/tot/2011/halfmoonbay.jpg); }
+  background-image: url(http://assets.imperomedia.com/images/tot/rocketboat.jpg); }
 
 .nav-4 {
   background-image: url(http://assets.imperomedia.com/images/tot/2012/WolfCreek.jpg);
@@ -847,7 +851,7 @@ ul, ol {
   margin: 0 0 1.5em 3em; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -872,6 +876,46 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+/*Pull Quotes*/
+.pullquote-right, .pullquote-left {
+  float: right;
+  width: 200px;
+  background: url(images/openquote.gif) top left no-repeat;
+  color: #2E7D32;
+  font-size: 26px;
+  font-style: italic;
+  padding: 13px;
+  border-left: 1px solid #2E7D32; }
+  .pullquote-right .by, .pullquote-left .by {
+    padding: 6px;
+    font-size: 12px;
+    color: #efefef;
+    background: #2E7D32; }
+  .pullquote-right p, .pullquote-left p {
+    line-height: 1.25;
+    margin: 20px 0; }
+  .pullquote-right blockquote, .pullquote-left blockquote {
+    margin: 0;
+    /* gets rid of the default blockquote margin */ }
+    .pullquote-right blockquote:before, .pullquote-left blockquote:before {
+      content: '’’';
+      float: left;
+      position: relative;
+      top: -115px;
+      width: 0%;
+      height: 100%;
+      pointer-events: none;
+      font-size: 8em;
+      text-align: left;
+      font-family: Arial;
+      letter-spacing: -16px;
+      font-style: normal;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.1); }
+
+.pullquote-left {
+  float: left; }
 
 .container {
   margin-right: auto;

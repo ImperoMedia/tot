@@ -17,7 +17,7 @@ html, body, .main-content-area, .full, .site-main {height: 100%;}
 	margin: 0 auto !important;
 }
 .entry-content {
-	padding: 175px 50px;
+	padding: 150px 200px;
 	background: rgba(255,255,255,.7);
 	min-height: 850px;
 	border-bottom: 4px solid $green;
@@ -25,6 +25,10 @@ html, body, .main-content-area, .full, .site-main {height: 100%;}
 		font-family: $gotham;
 		font-weight: 500;
 		text-transform: uppercase;
+		margin: 0;
+	}
+	p {
+		line-height: 2;
 	}
 }
 .nav-container {
@@ -170,13 +174,14 @@ FRONT PAGE
 		margin: 5em auto;
 		max-width: 1170px;
 		height: 100%;
+		min-height: 750px;
 	}
 }
 /*Front Page Navigation Block*/
 #nav {
 	width: 100%;
 	height: 500px;
-	overflow: hidden;
+	// overflow: hidden;
 	border-top: 2px solid $dark_green;
 	border-bottom: 2px solid $white;
 	.nav_minn, .nav_chicago, .nav_sf, .nav_lv {
@@ -191,7 +196,7 @@ FRONT PAGE
        &:hover{
 			opacity: 1;
 			@include transition(all 0.45s ease-in-out);
-			background: rgba( 35, 135, 35, 0.2 );
+			background: rgba( 35, 135, 35, 0.1);
 			font-size: 120%;
 			}
 	}
@@ -202,7 +207,7 @@ FRONT PAGE
 	display: block;
 	float: left;
 	text-align: center;
-	background-size: auto 100%;
+	background-size: auto 110%;
 	background-position: center center;
 	@include transition(all 0.5s ease-in-out);
 	border-right: 1px solid $white;
@@ -238,7 +243,7 @@ FRONT PAGE
 	background-image: url(http://assets.imperomedia.com/images/tot/2014/radar.jpg);
 }
 .nav-3 {
-	background-image: url(http://assets.imperomedia.com/images/tot/2011/halfmoonbay.jpg);
+	background-image: url(http://assets.imperomedia.com/images/tot/rocketboat.jpg);
 }
 .nav-4 {
 	background-image: url(http://assets.imperomedia.com/images/tot/2012/WolfCreek.jpg);
